@@ -1,18 +1,35 @@
+'use client';
+
+import { useLayoutEffect, useRef } from "react";
 import "./input-field.css";
 
-export default function TextInput(props: Readonly<{
+export default function TextInput({
+  label, placeholder, onChange
+}: Readonly<{
   label?: string;
   placeholder?: string;
   onChange?: (val: string) => void;
 }>) {
-  const labelText = props.label ?? "Enter your answer below";
-  const placeholderText = props.placeholder ?? "Answer text";
+  const labelText = label ?? "Enter your answer below";
+  const placeholderText = placeholder ?? "Answer text";
+
+  const textArea = useRef<HTMLTextAreaElement>(null);
+
+  function adjustAreaHeight() {
+    textArea.current!.style.height = "inherit";
+    textArea.current!.style.height = `${textArea.current!.scrollHeight}px`;
+  }
+
+  useLayoutEffect(adjustAreaHeight, []);
 
   return (
     <div className="input-field">
       <label htmlFor="input-text">{labelText}</label>
-      <input id="input-text" type="text" placeholder={placeholderText}
-        onChange={props.onChange && (e => props.onChange!(e.target.value))}
+      <textarea ref={textArea} id="input-text" placeholder={placeholderText} rows={1}
+        onChange={e => {
+          if(onChange) onChange(e.target.value);
+          adjustAreaHeight();
+        }}
       />
     </div>
   );

@@ -1,3 +1,5 @@
+'use client';
+
 import "./Form.css";
 import TextInput from "./input/TextInput";
 import Prompt from "./Prompt";

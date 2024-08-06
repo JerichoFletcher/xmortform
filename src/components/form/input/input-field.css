@@ -4,22 +4,23 @@
   align-items: center;
   gap: 10px;
 
-  input {
+  input, textarea {
     width: 100%;
     font-size: x-large;
+    resize: none;
     outline: none;
     transition: 0.5s;
   }
 }
 
-input[type=text] {
-  padding: 3px 0px;
+textarea {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   background-color: transparent;
   border: none;
   border-bottom: 3px solid var(--col-primary-mid);
 }
 
-input[type=text]:focus {
+textarea:focus {
   border: none;
   border-bottom: 3px solid var(--col-primary-highlight);
 }
