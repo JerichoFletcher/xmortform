@@ -1,0 +1,14 @@
+#prompt-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+#label-required {
+  font-style: oblique;
+  color: #973636;
+}
+
+#prompt-text {
+  font-size: xx-large;
+}
