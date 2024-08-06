@@ -1,16 +1,24 @@
 'use client';
 
+import { useState } from "react";
 import "./Form.css";
-import TextInput from "./input/TextInput";
+import LongTextInput from "./input/LongTextInput";
 import Prompt from "./Prompt";
 
 export default function Form() {
+  const [value, setValue] = useState<string>("");
+
   return (
     <div id="form-container">
       <Prompt required>
-        Example prompt: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        What is your name?
       </Prompt>
-      <TextInput placeholder="Example placeholder text"/>
+      <LongTextInput placeholder="Your name" onChange={setValue}/>
+      <span id="button-group-container">
+        <button className="button" id="button-next" onClick={e => {
+          console.log(`Value: ${value}`);
+        }}>Next</button>
+      </span>
     </div>
   );
 }

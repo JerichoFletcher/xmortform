@@ -3,7 +3,7 @@
 import { useLayoutEffect, useRef } from "react";
 import "./input-field.css";
 
-export default function TextInput({
+export default function LongTextInput({
   label, placeholder, onChange
 }: Readonly<{
   label?: string;
@@ -16,8 +16,10 @@ export default function TextInput({
   const textArea = useRef<HTMLTextAreaElement>(null);
 
   function adjustAreaHeight() {
-    textArea.current!.style.height = "inherit";
-    textArea.current!.style.height = `${textArea.current!.scrollHeight}px`;
+    if(textArea.current) {
+      textArea.current.style.height = "inherit";
+      textArea.current.style.height = `${textArea.current.scrollHeight}px`;
+    }
   }
 
   useLayoutEffect(adjustAreaHeight, []);

@@ -1,5 +1,5 @@
-import "./globals.css";
 import type { Metadata } from "next";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "XmortForm",
@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   authors: {
     name: "JerichoFletcher",
     url: "https://github.com/JerichoFletcher",
-  }
+  },
 };
 
 export default function RootLayout({

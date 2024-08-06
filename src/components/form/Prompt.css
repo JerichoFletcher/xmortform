@@ -6,7 +6,7 @@
 
 #label-required {
   font-style: oblique;
-  color: #973636;
+  color: var(--col-warning);
 }
 
 #prompt-text {

@@ -1,7 +1,7 @@
 'use client';
 
-import './Prompt.css';
 import React from 'react';
+import './Prompt.css';
 
 export default function Prompt({
   children, required

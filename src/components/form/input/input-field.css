@@ -9,7 +9,7 @@
     font-size: x-large;
     resize: none;
     outline: none;
-    transition: 0.5s;
+    transition: 0.25s;
   }
 }
 
@@ -27,5 +27,11 @@ textarea:focus {
 
 label {
   font-size: large;
-  color: var(--col-gray-2);
+  color: var(--col-gray-1);
+}
+
+@media (prefers-color-scheme: light) {
+  label {
+    color: var(--col-gray-3);
+  }
 }

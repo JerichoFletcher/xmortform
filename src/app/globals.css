@@ -4,8 +4,8 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: #ffffffd2;
-  background-color: #1b1b1b;
+  color: var(--col-text-light);
+  background-color: var(--col-black);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -14,7 +14,15 @@
 
   --col-primary-highlight: #a076bd;
   --col-primary-mid: #61397c;
+
+  --col-warning: #e74e4e;
   
+  --col-white: #f4f4f4;
+  --col-black: #1b1b1b;
+
+  --col-text-light: #ffffff;
+  --col-text-dark: #213547;
+
   --col-gray-1: #c2c2c2;
   --col-gray-2: #808080;
   --col-gray-3: #3a3a3a;
@@ -33,9 +41,21 @@ body {
   align-items: center;
 }
 
+.button {
+  border: none;
+  padding: 10px 24px;
+  text-align: center;
+  font-size: large;
+  border-radius: 24px;
+
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.25s;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
-    background-color: #f4f4f4;
+    color: var(--col-text-dark);
+    background-color: var(--col-white);
   }
 }

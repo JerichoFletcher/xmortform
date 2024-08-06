@@ -9,4 +9,30 @@
   * {
     width: 100%;
   }
+
+  .button {
+    width: fit-content;
+  }
+}
+
+#button-next {
+  color: var(--col-text-light);
+  border: 3px solid transparent;
+  background-color: var(--col-primary-mid);
+}
+
+#button-next:hover {
+  border: 3px solid var(--col-primary-highlight);
+  background-color: transparent;
+}
+
+#button-group-container {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+@media (prefers-color-scheme: light) {
+  #button-next:hover {
+    color: var(--col-text-dark);
+  }
 }
