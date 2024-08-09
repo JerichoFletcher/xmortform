@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import "./Form.css";
-import LongTextInput from "./input/LongTextInput";
+import Input from "./input";
 import Prompt from "./Prompt";
 
 export default function Form() {
@@ -13,7 +13,7 @@ export default function Form() {
       <Prompt required>
         What is your name?
       </Prompt>
-      <LongTextInput placeholder="Your name" onChange={setValue}/>
+      <Input.ShortText placeholder={"Your name"} onChange={setValue}/>
       <span id="button-group-container">
         <button className="button" id="button-next" onClick={e => {
           console.log(`Value: ${value}`);
