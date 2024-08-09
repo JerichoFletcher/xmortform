@@ -13,14 +13,14 @@
   }
 }
 
-textarea {
+input[type=text], textarea {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   background-color: transparent;
   border: none;
   border-bottom: 3px solid var(--col-primary-mid);
 }
 
-textarea:focus {
+input[type=text]:focus, textarea:focus {
   border: none;
   border-bottom: 3px solid var(--col-primary-highlight);
 }

@@ -11,7 +11,7 @@ export default function LongTextInput({
   onChange?: (val: string) => void;
 }>) {
   const labelText = label ?? "Enter your answer below";
-  const placeholderText = placeholder ?? "Answer text";
+  const placeholderText = placeholder ?? "Long answer text";
 
   const textArea = useRef<HTMLTextAreaElement>(null);
 
